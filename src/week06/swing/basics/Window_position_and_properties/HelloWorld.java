@@ -1,4 +1,4 @@
-package week06.swing.basics.say_hello_to_all_the_world;
+package week06.swing.basics.Window_position_and_properties;
 
 import javax.swing.*;
 
@@ -28,6 +28,7 @@ public class HelloWorld extends JFrame {
     // JFrame
     this.setSize(400, 400);
     this.setLocationRelativeTo(null);
+    this.setResizable(false);
     this.setTitle("Hello World");
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
