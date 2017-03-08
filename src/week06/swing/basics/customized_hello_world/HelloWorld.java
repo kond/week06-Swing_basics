@@ -30,7 +30,7 @@ public class HelloWorld extends JFrame {
     JLabel label1 = new JLabel("Hello Kond!");
     label1.setVisible(true);
     panel.add(label1);
-    
+
     this.add(panel);
 
     this.setVisible(true);
