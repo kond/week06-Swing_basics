@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
  */
 public class Counter extends JFrame {
 
-  private JButton countButton;
+  private JButton countButton, resetButton;
   private JLabel countLabel;
   private int pressCount = 0;
 
@@ -35,10 +35,14 @@ public class Counter extends JFrame {
     // JPanel
     JPanel panel = new JPanel();
 
-    // JButton
+    // JButtons
     countButton = new JButton("Press me!");
     countButton.addActionListener(new CountButtonActionListener());
     panel.add(countButton);
+
+    resetButton = new JButton("Reset");
+    resetButton.addActionListener(new ResetButtonActionListener());
+    panel.add(resetButton);
 
     // JLabel
     countLabel = new JLabel("Pressed: 0");
@@ -58,6 +62,14 @@ public class Counter extends JFrame {
     @Override
     public void actionPerformed(ActionEvent e) {
       pressCount++;
+      updateCounter();
+    }
+  }
+
+  private class ResetButtonActionListener implements ActionListener {
+    @Override
+    public void actionPerformed(ActionEvent e) {
+      pressCount = 0;
       updateCounter();
     }
   }
